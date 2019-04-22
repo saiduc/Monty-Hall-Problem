@@ -60,25 +60,25 @@ def run(n, switch):
 
 
 # running 1st set
-values_switch = run(100000, True)
-goats_frac_switch = str(round(values_switch[0]/np.sum(values_switch) * 100, 3)) + '%'
-cars_frac_switch = str(round(values_switch[1]/np.sum(values_switch) * 100, 3)) + '%'
-labels_switch = ["goats " + goats_frac_switch, "cars " + cars_frac_switch]
+val_switch = run(100000, True)
+goats_switch = str(round(val_switch[0]/np.sum(val_switch) * 100, 3)) + '%'
+cars_switch = str(round(val_switch[1]/np.sum(val_switch) * 100, 3)) + '%'
+labels_switch = ["goats " + goats_switch, "cars " + cars_switch]
 
 # running 2nd set
-values_stay = run(100000, False)
-goats_frac_stay = str(round(values_stay[0]/np.sum(values_stay) * 100, 3)) + '%'
-cars_frac_stay = str(round(values_stay[1]/np.sum(values_stay) * 100, 3)) + '%'
-labels_stay = ["goats " + goats_frac_stay, "cars " + cars_frac_stay]
+val_switch = run(100000, False)
+goats_stay = str(round(val_switch[0]/np.sum(val_switch) * 100, 3)) + '%'
+cars_stay = str(round(val_switch[1]/np.sum(val_switch) * 100, 3)) + '%'
+labels_stay = ["goats " + goats_stay, "cars " + cars_stay]
 
 # plotting 1st graph
 plt.subplot(211)
 plt.title("If Always Switch:")
-plt.pie(values_switch, labels = labels_switch)
+plt.pie(val_switch, labels=labels_switch)
 
 # plotting 2nd graph
 plt.subplot(212)
 plt.title("If Always Stay:")
-plt.pie(values_stay, labels = labels_stay)
+plt.pie(val_switch, labels=labels_stay)
 
 plt.show()
