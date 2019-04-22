@@ -45,8 +45,8 @@ So if you always switch, you have a 2/3 chance of winning a car, as opposed to
 
 ## The Code
 
-The code is very simple. It sets up the problem and runs n = 1000 trials of
-always switching the door, and n = 1000 trials of always sticking with the
+The code is very simple. It sets up the problem and runs n = 100000 trials of
+always switching the door, and n = 100000 trials of always sticking with the
 original door. It then plots pie charts showing the outcomes.
 
 As expected, we see 2/3 car if you always switch and 1/3 car if you don't.
