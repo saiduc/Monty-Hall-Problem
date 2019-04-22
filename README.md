@@ -51,6 +51,17 @@ original door. It then plots pie charts showing the outcomes.
 
 As expected, we see 2/3 car if you always switch and 1/3 car if you don't.
 
+## Requirements
+* Python 3 (not tested with Python 2 but will probably still work)
+* Matplotlib module (for plotting the pie charts)
+* Numpy module (for random choices)
+
+## Usage
+Run however you normally run python code, usually in the terminal:
+```
+python montyhall.py
+```
+
 ## Acknowledgements
 
 * A fun numberphile video on the subject: 
