@@ -4,7 +4,7 @@ import numpy as np
 
 class door:
     """
-    docstring
+    The door object has one attribute that defines what is behind it
     """
 
     def __init__(self, item):
@@ -13,13 +13,21 @@ class door:
 
 def game(chosen, switch):
     """
-    docstring
+    This runs the game. 
+    Takes parameters: 
+        int chosen (for initially chosen door)
+        bool switch (for whether you will switch doors)
+
+    Returns:
+        item behind final chosen door
     """
+    # creates door objects
     door_A = door("goat")
     door_B = door("goat")
     door_C = door("car")
     doors = [door_A, door_B, door_C]
 
+    # matches function argument to a door
     if chosen == 1:
         chosen = door_A
     elif chosen == 2:
@@ -27,12 +35,14 @@ def game(chosen, switch):
     elif chosen == 3:
         chosen = door_C
 
+    # removes 1 goat-door from the list
     removed = False
     for i in doors:
         if i.item == "goat" and removed == False and i != chosen:
             doors.remove(i)
             removed = True
 
+    # switches door if function argument is True
     if switch:
         for i in doors:
             if i != chosen:
@@ -41,12 +51,19 @@ def game(chosen, switch):
     else:
         new_chosen = chosen
 
+    # returns final result
     return new_chosen.item
 
 
 def run(n, switch):
     """
-    docstring
+    Runs game multiple times.
+    Takes parameters:
+        int n (the number of times you want to run the game)
+        bool switch (whether you want to switch doors)
+
+    Returns:
+        List of the number of goats and cars won
     """
     goats = 0
     cars = 0
