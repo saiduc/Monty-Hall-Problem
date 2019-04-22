@@ -62,6 +62,10 @@ Run however you normally run python code, usually in the terminal:
 python montyhall.py
 ```
 
+## License
+This project is licensed under the terms of the MIT license. Do whatever you
+want with it!
+
 ## Acknowledgements
 
 * A fun numberphile video on the subject: 
